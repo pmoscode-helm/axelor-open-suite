@@ -1,0 +1,19 @@
+apiVersion: v2
+name: axelor-os
+description: Open source ERP and BPM platform
+
+type: application
+
+version: 0.1.0
+appVersion: "v7.1.1"
+
+maintainers:
+  - name: pmoscode
+    url: pmoscode.de
+    email: info@pmoscode.de
+
+dependencies:
+  - name: postgresql
+    repository: https://charts.bitnami.com/bitnami
+    version: 12.8.0
+    condition: postgresql.enabled
