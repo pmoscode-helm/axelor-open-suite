@@ -1,4 +1,4 @@
-name: ci
+name: Deploy to Dockerhub
 
 on:
   workflow_dispatch:
