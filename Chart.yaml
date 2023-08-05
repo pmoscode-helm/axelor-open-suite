@@ -1,5 +1,5 @@
 apiVersion: v2
-name: axelor-os
+name: axelor-open-suite
 description: Open source ERP and BPM platform
 
 type: application
