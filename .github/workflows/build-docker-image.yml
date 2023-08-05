@@ -2,16 +2,11 @@ name: ci
 
 on:
   workflow_dispatch:
-#  schedule:
-#    - cron: "0 10 * * *"
-#  push:
-#    branches:
-#      - "**"
-#    tags:
-#      - "v*.*.*"
-#  pull_request:
-#    branches:
-#      - "main"
+  schedule:
+    - cron: "0 10 * * *"
+  push:
+    tags:
+      - "v*.*.*"
 
 jobs:
   docker:
@@ -27,12 +22,11 @@ jobs:
           images: |
             pmoscode/axelor-open-suite
           tags: |
-            type=ref,event=branch
-            type=ref,event=pr
+            type=schedule,pattern=nightly
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
             type=semver,pattern={{major}}
-            type=sha
+            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'master') }}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
