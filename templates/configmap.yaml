@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "axelor-open-suite.fullname" . }}
+  labels:
+    {{- include "axelor-open-suite.labels" . | nindent 4 }}
+data:
+  AXELOR_CONFIG_DB_DEFAULT_URL: "jdbc:postgresql://{{ .Release.Name }}-postgresql:5432/{{ .Values.postgresql.auth.database }}"
+  AXELOR_CONFIG_DB_DEFAULT_USER: "{{ .Values.postgresql.auth.username }}"
+  {{- if .Values.ingress.enabled }}
+  {{- with (first .Values.ingress.hosts) }}
+  AXELOR_CONFIG_APPLICATION_HOME: "{{ .host }}"
+  AXELOR_CONFIG_APPLICATION_BASE-URL: "{{ .host }}"
+  {{- end }}
+  {{- else }}
+  AXELOR_CONFIG_APPLICATION_HOME: "localhost"
+  AXELOR_CONFIG_APPLICATION_BASE-URL: "localhost"
+  {{- end }}
+  AXELOR_CONFIG_APPLICATION_MODE: "{{ .Values.config.applicationMode }}"
+  AXELOR_CONFIG_APPLICATION_LOCALE: "{{ .Values.config.applicationLocale }}"
+  AXELOR_CONFIG_DATA_UPLOAD_DIR: "/home/axelor/.axelor/attachments"
+  AXELOR_CONFIG_DATA_UPLOAD_MAX-SIZE: "{{ .Values.config.maxUploadSize }}"
+  AXELOR_CONFIG_DATA_EXPORT_DIR: "/home/axelor/.axelor/export"
+  AXELOR_CONFIG_DATA_IMPORT_DEMO-DATA: "{{ .Values.config.importDemoData}}"
