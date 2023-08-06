@@ -1,11 +1,16 @@
 image:
-  repository: nginx
+  repository: pmoscode/axelor-open-suite
   pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
 nameOverride: ""
 fullnameOverride: ""
+
+config:
+  applicationMode: dev # or prod
+  applicationLocale: de_DE
+  maxUploadSize: 100 # in MB
+  importDemoData: true
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -66,6 +71,13 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+persistence:
+  enabled: false
+  existingClaim: ""
+  storageClass: "-"
+  accessMode: ReadWriteOnce
+  size: 50G
 
 postgresql:
   enabled: true

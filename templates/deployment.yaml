@@ -27,6 +27,25 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          envFrom:
+            - configMapRef:
+                name: {{ include "axelor-open-suite.fullname" . }}
+          env:
+            - name: AXELOR_CONFIG_DB_DEFAULT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: password
+                  name: {{ .Release.Name }}-postgresql
+          volumeMounts:
+            - name: {{ include "axelor-open-suite.fullname" . }}-data
+              subPath: attachments
+              mountPath: /home/axelor/.axelor/attachments
+            - name: {{ include "axelor-open-suite.fullname" . }}-data
+              subPath: export
+              mountPath: /home/axelor/.axelor/export
+{{/*            - name: {{ include "axelor-open-suite.fullname" . }}-data*/}}
+{{/*              subPath: tomcat*/}}
+{{/*              mountPath: /usr/local/tomcat/webapps*/}}
           ports:
             - name: http
               containerPort: 8080
@@ -53,3 +72,14 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+      volumes:
+        - name: {{ include "axelor-open-suite.fullname" . }}-data
+          {{- if and .Values.persistence.enabled .Values.persistence.existingClaim }}
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistence.existingClaim }}
+          {{- else if and .Values.persistence.enabled (not .Values.persistence.existingClaim) }}
+          persistentVolumeClaim:
+            claimName: {{ include "axelor-open-suite.fullname" . }}-data
+          {{- else }}
+          emptyDir: { }
+          {{- end }}
