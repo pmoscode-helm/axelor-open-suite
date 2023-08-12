@@ -1,12 +1,12 @@
 image:
   repository: pmoscode/axelor-open-suite
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   tag: ""
 
 nameOverride: ""
 fullnameOverride: ""
 
-config:
+axelor:
   applicationMode: dev # or prod
   applicationLocale: de_DE
   maxUploadSize: 100 # in MB
@@ -23,15 +23,14 @@ serviceAccount:
 
 podAnnotations: {}
 
-podSecurityContext: {}
-  # fsGroup: 2000
+podSecurityContext:
+  fsGroup: 1001
 
 securityContext:
   runAsNonRoot: true
   privileged: false
   allowPrivilegeEscalation: false
-  runAsUser: 10101
-  runAsGroup: 10101
+  runAsUser: 1001
 
 service:
   type: ClusterIP
@@ -41,8 +40,8 @@ ingress:
   enabled: false
   className: ""
   annotations:
-    nginx.org/proxy-read-timeout: "360s"
-    nginx.org/proxy-send-timeout: "360s"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "1800"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "1800"
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
@@ -55,15 +54,11 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
-resources: {}
-  # We usually recommend not to specify default resources and to leave this as a conscious
-  # choice for the user. This also increases chances charts run on environments with little
-  # resources, such as Minikube. If you do want to specify resources, uncomment the following
-  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+resources:
+   requests:
+     cpu: 300m
+     memory: 512Mi
   # limits:
-  #   cpu: 100m
-  #   memory: 128Mi
-  # requests:
   #   cpu: 100m
   #   memory: 128Mi
 
@@ -76,9 +71,9 @@ affinity: {}
 persistence:
   enabled: false
   existingClaim: ""
-  storageClass: "-"
+  storageClass: ""
   accessMode: ReadWriteOnce
-  size: 50G
+  size: 50Gi
 
 postgresql:
   enabled: true

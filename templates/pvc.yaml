@@ -1,8 +1,10 @@
-{{- if and .Values.persistence.enabled (not .Values.persistence.existingClaim) }}
+{{- if .Values.persistence.enabled }}
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: {{ include "axelor-open-suite.fullname" . }}-data
+  labels:
+      {{- include "axelor-open-suite.labels" . | nindent 4 }}
 spec:
   {{- if .Values.persistence.storageClass }}
   storageClassName: {{ .Values.persistence.storageClass | quote }}

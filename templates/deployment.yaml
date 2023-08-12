@@ -9,6 +9,8 @@ spec:
   selector:
     matchLabels:
       {{- include "axelor-open-suite.selectorLabels" . | nindent 6 }}
+  strategy:
+    type: Recreate
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -31,21 +33,29 @@ spec:
             - configMapRef:
                 name: {{ include "axelor-open-suite.fullname" . }}
           env:
+            - name: BITNAMI_DEBUG
+              value: "false"
+            - name: TOMCAT_USERNAME
+              value: "user"
+            - name: TOMCAT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "axelor-open-suite.fullname" . }}-tomcat
+                  key: tomcat-password
+            - name: TOMCAT_ALLOW_REMOTE_MANAGEMENT
+              value: "0"
             - name: AXELOR_CONFIG_DB_DEFAULT_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  key: password
                   name: {{ .Release.Name }}-postgresql
+                  key: password
           volumeMounts:
             - name: {{ include "axelor-open-suite.fullname" . }}-data
-              subPath: attachments
-              mountPath: /home/axelor/.axelor/attachments
+              subPath: tomcat
+              mountPath: /bitnami/tomcat
             - name: {{ include "axelor-open-suite.fullname" . }}-data
-              subPath: export
-              mountPath: /home/axelor/.axelor/export
-{{/*            - name: {{ include "axelor-open-suite.fullname" . }}-data*/}}
-{{/*              subPath: tomcat*/}}
-{{/*              mountPath: /usr/local/tomcat/webapps*/}}
+              subPath: axelor
+              mountPath: /opt/data/
           ports:
             - name: http
               containerPort: 8080
