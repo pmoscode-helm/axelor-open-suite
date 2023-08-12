@@ -1,0 +1,61 @@
+# {{ template "chart.name" . }} Helm Chart
+{{ template "chart.versionBadge" . }}
+[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/axelor-open-suite)](https://artifacthub.io/packages/search?repo=axelor-open-suite)
+
+Open source ERP and BPM platform.
+
+Axelor Open Suite reduces the complexity and improve responsiveness of business processes.
+Thanks to its modularity, you can start with few features and then activate other modules when needed.
+
+## Get Repo Info
+
+    helm repo add my-axelor https://pmoscode-helm.github.io/axelor-open-suite/
+    helm repo update
+
+## Install chart
+
+    helm install [RELEASE_NAME] my-axelor/axelor-open-suite
+
+The command deploys axelor-open-suite on the Kubernetes cluster in the default configuration.
+
+See configuration below.
+
+See [helm install](https://helm.sh/docs/helm/helm_install/) for command documentation.
+
+## Uninstall Chart
+
+    helm uninstall [RELEASE_NAME]
+
+This removes all the Kubernetes components associated with the chart and deletes the release.
+
+See [helm uninstall](https://helm.sh/docs/helm/helm_uninstall/) for command documentation.
+
+## Upgrading Chart
+
+    helm upgrade [RELEASE_NAME] [CHART] --install
+
+See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command documentation.
+
+{{ template "chart.deprecationWarning" . }}
+
+{{ template "chart.requirementsSection" . }}
+
+{{ template "chart.valuesHeader" . }}
+
+{{ template "chart.valuesTable" . }}
+
+In the "axelor" section: These are not all possible configuration options, but the ones I use. If you want more specific options, feel free to open an issue or provide an PR.
+
+{{ template "chart.maintainersSection" . }}
+
+## Contributing
+
+If you want to add features or bugfixes, please open an issue (either feature or bug).
+
+You also need to copy the ".env-template" file as ".env" and configure it for your needs.
+
+The Taskfile itself needs this tools to run the tasks:
+- https://github.com/helm/chart-releaser
+- https://helm.sh/docs/intro/quickstart/
+- https://github.com/norwoodj/helm-docs
+- https://github.com/pawamoy/git-changelog
