@@ -1,24 +1,31 @@
 image:
+  # -- base image
   repository: pmoscode/axelor-open-suite
-  pullPolicy: Always
+  # -- PullPolicy (change to "Always" when using "latest")
+  pullPolicy: IfNotPresent
+  # -- If not set, uses chart appVersion
   tag: ""
 
 nameOverride: ""
 fullnameOverride: ""
 
 axelor:
+  # -- Axelor's current app environment - dev or prod (NOTE. On "prod" the "admin" account is disabled and has to enabled in the database...)
   applicationMode: dev # or prod
+  # -- Apps locale
   applicationLocale: de_DE
+  # -- Max upload size in requests in MB
   maxUploadSize: 100 # in MB
+  # -- Should demo data be imported?
   importDemoData: true
 
 serviceAccount:
-  # Specifies whether a service account should be created
+  # -- Specifies whether a service account should be created
   create: true
-  # Annotations to add to the service account
+  # -- Annotations to add to the service account
   annotations: {}
-  # The name of the service account to use.
-  # If not set and create is true, a name is generated using the fullname template
+  # -- The name of the service account to use.
+  # -- If not set and create is true, a name is generated using the fullname template
   name: ""
 
 podAnnotations: {}
@@ -69,14 +76,19 @@ tolerations: []
 affinity: {}
 
 persistence:
+  # -- Enable persistence
   enabled: false
+  # -- Use, when you have an existing PVC
   existingClaim: ""
   storageClass: ""
   accessMode: ReadWriteOnce
   size: 50Gi
 
 postgresql:
+  # -- Build in postgresql db
   enabled: true
   auth:
+    # -- Default db user
     username: axelor
+    # -- Default database to use
     database: axelor
