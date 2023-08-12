@@ -1,2 +1,5 @@
 .idea
 charts
+
+.env
+.cr-release-packages

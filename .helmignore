@@ -21,3 +21,10 @@
 .idea/
 *.tmproj
 .vscode/
+
+
+README.md.gotmpl
+artifacthub-repo.yml
+tests
+renovate.json
+Taskfile.yaml
