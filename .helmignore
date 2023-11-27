@@ -28,3 +28,6 @@ artifacthub-repo.yml
 tests
 renovate.json
 Taskfile.yaml
+.env-template
+.env
+.github
