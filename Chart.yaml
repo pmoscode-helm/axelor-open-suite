@@ -7,8 +7,8 @@ description: |
 
 type: application
 
-version: 7.2.0
-appVersion: "v7.2.0"
+version: 7.2.1
+appVersion: "v7.2.1"
 
 home: https://axelor.com/
 icon: https://axelor.com/wp-content/uploads/2023/05/logo-axelor-bleu.svg
@@ -32,7 +32,7 @@ dependencies:
 annotations:
   artifacthub.io/images: |
     - name: Axelor Open Suite
-      image: pmoscode/axelor-open-suite:v7.2.0
+      image: pmoscode/axelor-open-suite:v7.2.1
       platforms:
         - linux/amd64
   artifacthub.io/license: MIT
