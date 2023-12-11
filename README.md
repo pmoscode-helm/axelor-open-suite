@@ -1,5 +1,5 @@
 # axelor-open-suite Helm Chart
-![Version: 7.1.8](https://img.shields.io/badge/Version-7.1.8-informational?style=flat-square)
+![Version: 7.1.9](https://img.shields.io/badge/Version-7.1.9-informational?style=flat-square)
 [![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/axelor-open-suite)](https://artifacthub.io/packages/search?repo=axelor-open-suite)
 
 Open source ERP and BPM platform.
