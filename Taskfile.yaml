@@ -27,6 +27,7 @@ tasks:
   index:
     desc: Creates or updates the index file and pushes it to the default github pages branch
     cmds:
+      - git pull
       - ./cr-index.sh
       - rm index.yaml
 
