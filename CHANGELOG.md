@@ -6,9 +6,25 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- insertion marker -->
-## Unreleased
+## [axelor-open-suite-7.1.6](https://github.com/pmoscode-helm/axelor-open-suite/releases/tag/axelor-open-suite-7.1.6) - 2023-12-11
 
-<small>[Compare with latest](https://github.com/pmoscode-helm/axelor-open-suite/compare/axelor-open-suite-7.1.2...HEAD)</small>
+<small>[Compare with axelor-open-suite-7.1.3](https://github.com/pmoscode-helm/axelor-open-suite/compare/axelor-open-suite-7.1.3...axelor-open-suite-7.1.6)</small>
+
+### Features
+
+- bump appVersion to v7.1.4 ([9c252e8](https://github.com/pmoscode-helm/axelor-open-suite/commit/9c252e86952e46198787c848a4809f9cb3f8ed25) by Peter Motzko).
+- add Trivi scan ([0cd995f](https://github.com/pmoscode-helm/axelor-open-suite/commit/0cd995fad48fc76c171082b792fbfb68ccd5335b) by Peter Motzko).
+- update README.md ([c809277](https://github.com/pmoscode-helm/axelor-open-suite/commit/c809277f08176ae0cd5c7bbf3a7d76a939562d77) by Peter Motzko).
+- bump appVersion to v7.1.3 ([aef0674](https://github.com/pmoscode-helm/axelor-open-suite/commit/aef0674a3ea0e1b0d9dea73af42ea08d7ae7df7b) by Peter Motzko).
+- add Helm chart image update check ([999ed39](https://github.com/pmoscode-helm/axelor-open-suite/commit/999ed394eeca57b245c5d48b4d2ae57fe6131c09) by Peter Motzko).
+
+### Bug Fixes
+
+- add more files to .helmignore ([f361701](https://github.com/pmoscode-helm/axelor-open-suite/commit/f361701ec427142df53a4338e06f1565252fd9cb) by Peter Motzko).
+
+## [axelor-open-suite-7.1.3](https://github.com/pmoscode-helm/axelor-open-suite/releases/tag/axelor-open-suite-7.1.3) - 2023-08-12
+
+<small>[Compare with axelor-open-suite-7.1.2](https://github.com/pmoscode-helm/axelor-open-suite/compare/axelor-open-suite-7.1.2...axelor-open-suite-7.1.3)</small>
 
 ### Features
 
@@ -23,7 +39,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - cleanup Taskfile ([bf876a4](https://github.com/pmoscode-helm/axelor-open-suite/commit/bf876a4982f8589e53a3d5fad687434aa6335227) by Peter Motzko).
 - add helm-docs content ([1b91bdd](https://github.com/pmoscode-helm/axelor-open-suite/commit/1b91bddaf4e7c90fdeb733960ff017bd755f9fb4) by Peter Motzko).
 
-<!-- insertion marker -->
 ## [axelor-open-suite-7.1.2](https://github.com/pmoscode-helm/axelor-open-suite/releases/tag/axelor-open-suite-7.1.2) - 2023-08-12
 
 <small>[Compare with v7.1.1](https://github.com/pmoscode-helm/axelor-open-suite/compare/v7.1.1...axelor-open-suite-7.1.2)</small>
