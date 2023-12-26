@@ -8,13 +8,22 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 <!-- insertion marker -->
 ## Unreleased
 
-<small>[Compare with latest](https://github.com/pmoscode-helm/axelor-open-suite/compare/axelor-open-suite-7.2.3...HEAD)</small>
+<small>[Compare with latest](https://github.com/pmoscode-helm/axelor-open-suite/compare/axelor-open-suite-7.2.4...HEAD)</small>
+
+### Features
+
+- bump appVersion to v7.2.5 ([a9baed5](https://github.com/pmoscode-helm/axelor-open-suite/commit/a9baed57c39be72e4225ee548a9e0887fce94c63) by Peter Motzko).
+- bump appVersion to v7.2.4 ([7b0076f](https://github.com/pmoscode-helm/axelor-open-suite/commit/7b0076f06ca1fe08eb83dd891d30232e4bbecbc3) by Peter Motzko).
+
+<!-- insertion marker -->
+## [axelor-open-suite-7.2.4](https://github.com/pmoscode-helm/axelor-open-suite/releases/tag/axelor-open-suite-7.2.4) - 2023-12-11
+
+<small>[Compare with axelor-open-suite-7.2.3](https://github.com/pmoscode-helm/axelor-open-suite/compare/axelor-open-suite-7.2.3...axelor-open-suite-7.2.4)</small>
 
 ### Features
 
 - bump appVersion to v7.2.3 ([b9d8f03](https://github.com/pmoscode-helm/axelor-open-suite/commit/b9d8f0333ac6a1b43b1336a62baea23fdd01e1d2) by Peter Motzko).
 
-<!-- insertion marker -->
 ## [axelor-open-suite-7.2.3](https://github.com/pmoscode-helm/axelor-open-suite/releases/tag/axelor-open-suite-7.2.3) - 2023-12-11
 
 <small>[Compare with axelor-open-suite-7.2.2](https://github.com/pmoscode-helm/axelor-open-suite/compare/axelor-open-suite-7.2.2...axelor-open-suite-7.2.3)</small>
@@ -116,7 +125,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [axelor-open-suite-7.1.2](https://github.com/pmoscode-helm/axelor-open-suite/releases/tag/axelor-open-suite-7.1.2) - 2023-08-12
 
-<small>[Compare with v7.1.1](https://github.com/pmoscode-helm/axelor-open-suite/compare/v7.1.1...axelor-open-suite-7.1.2)</small>
+<small>[Compare with first commit](https://github.com/pmoscode-helm/axelor-open-suite/compare/7880d29a961afa2c4c4f90b7de1a1b69fee69e67...axelor-open-suite-7.1.2)</small>
 
 ### Features
 
@@ -126,23 +135,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - set bigger timeout for ingress ([f8b3c9e](https://github.com/pmoscode-helm/axelor-open-suite/commit/f8b3c9e0c8794659b65f2fb919e8958967c6d47d) by Peter Motzko).
 - add more setting for liveness, readyness and startup probes ([4603059](https://github.com/pmoscode-helm/axelor-open-suite/commit/460305995c48681c572fb2dfd0229eb83d288d9a) by Peter Motzko).
 - add environment values and volumes ([fc7e250](https://github.com/pmoscode-helm/axelor-open-suite/commit/fc7e25008161ffa8b521e4d403d7ec87abfc7837) by Peter Motzko).
-
-### Bug Fixes
-
-- full version prefix ([3a9dc8c](https://github.com/pmoscode-helm/axelor-open-suite/commit/3a9dc8c0c3377c541b8ad7b1e742008ef6b9160f) by Peter Motzko).
-
-### Code Refactoring
-
-- remove autoscaling and imagePullSecret ([984200a](https://github.com/pmoscode-helm/axelor-open-suite/commit/984200a1b012d95155c4da0e871396caaae90f25) by Peter Motzko).
-- rename internal chart name ([e4f5c1c](https://github.com/pmoscode-helm/axelor-open-suite/commit/e4f5c1cb64fb4f08f72a8cae7b0a93b547154bc5) by Peter Motzko).
-- Move Docker image part to own repo ([da119d7](https://github.com/pmoscode-helm/axelor-open-suite/commit/da119d728498d758f55dac02a3340d6aa9123346) by Peter Motzko).
-
-## [v7.1.1](https://github.com/pmoscode-helm/axelor-open-suite/releases/tag/v7.1.1) - 2023-08-05
-
-<small>[Compare with first commit](https://github.com/pmoscode-helm/axelor-open-suite/compare/7880d29a961afa2c4c4f90b7de1a1b69fee69e67...v7.1.1)</small>
-
-### Features
-
 - refine version pattern ([dc76735](https://github.com/pmoscode-helm/axelor-open-suite/commit/dc767353ec3248396153d30b4ccf33b1b411358f) by Peter Motzko).
 - refine triggering events ([691540b](https://github.com/pmoscode-helm/axelor-open-suite/commit/691540b9a1f26c050c640f05708146f05b29bc57) by Peter Motzko).
 - add Taskfile action and download latest Axelor release ([aa46a2a](https://github.com/pmoscode-helm/axelor-open-suite/commit/aa46a2aa410b4707ac6a211b8ee12575aa0ff0b5) by Peter Motzko).
@@ -152,8 +144,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Bug Fixes
 
+- full version prefix ([3a9dc8c](https://github.com/pmoscode-helm/axelor-open-suite/commit/3a9dc8c0c3377c541b8ad7b1e742008ef6b9160f) by Peter Motzko).
 - typo ([5db8fa4](https://github.com/pmoscode-helm/axelor-open-suite/commit/5db8fa4b7db9260b7bab32a26bc29e2e15ae4be6) by Peter Motzko).
 - try to remove ci error v3 ([5292e2a](https://github.com/pmoscode-helm/axelor-open-suite/commit/5292e2a1f253a1b1c41daabb1a9e02def64386ef) by Peter Motzko).
 - try to remove ci error v2 ([7e1d0f7](https://github.com/pmoscode-helm/axelor-open-suite/commit/7e1d0f7bced29491c476753cd2fc24bcf26de630) by Peter Motzko).
 - try to remove ci error ([a983b79](https://github.com/pmoscode-helm/axelor-open-suite/commit/a983b79ab4a4cbcfab8fed5501058b06a5dd610b) by Peter Motzko).
+
+### Code Refactoring
+
+- remove autoscaling and imagePullSecret ([984200a](https://github.com/pmoscode-helm/axelor-open-suite/commit/984200a1b012d95155c4da0e871396caaae90f25) by Peter Motzko).
+- rename internal chart name ([e4f5c1c](https://github.com/pmoscode-helm/axelor-open-suite/commit/e4f5c1cb64fb4f08f72a8cae7b0a93b547154bc5) by Peter Motzko).
+- Move Docker image part to own repo ([da119d7](https://github.com/pmoscode-helm/axelor-open-suite/commit/da119d728498d758f55dac02a3340d6aa9123346) by Peter Motzko).
 
