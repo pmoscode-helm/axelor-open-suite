@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Features
 
-- bump appVersion to v7.2.6 ([c640333](https://github.com/pmoscode-helm/axelor-open-suite/commit/c640333644953da8c429fe6d09e7ed01d691e350) by Peter Motzko).
+- bump appVersion to v7.2.6 ([20647de](https://github.com/pmoscode-helm/axelor-open-suite/commit/20647de01820967c52bfa78080865fcf519d38d0) by Peter Motzko).
 
 <!-- insertion marker -->
 ## [axelor-open-suite-7.2.5](https://github.com/pmoscode-helm/axelor-open-suite/releases/tag/axelor-open-suite-7.2.5) - 2023-12-26
