@@ -29,7 +29,7 @@ tasks:
     cmds:
       - git pull
       - ./cr-index.sh
-      - rm index.yaml
+      - rm -rf index.yaml
 
   publish:
     desc: Execute all steps for a Helm Chart deployment on GitHub-Pages (Don't forget to bump proper version)
