@@ -25,7 +25,7 @@ jobs:
 
       - name: Check for updates
         run: |
-          hcuc --docker-hub-repo pmoscode/axelor-open-suite --fail-on-update --debug
+          hcuc --docker-hub-repo pmoscode/axelor-open-suite --fail-on-update --exclude-versions ^8.0.0 --debug
 
       - name: Send notification
         if: failure()
