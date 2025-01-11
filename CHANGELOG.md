@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Features
 
+- update to v7.2.30 ([9e292f1](https://github.com/pmoscode-helm/axelor-open-suite/commit/9e292f1495037042fef13fed1cf30609a47d0d63) by Peter Motzko).
 - update to v7.2.29 ([ce0418e](https://github.com/pmoscode-helm/axelor-open-suite/commit/ce0418ed46925d0d38cb5545db3717dae2887784) by Peter Motzko).
 
 <!-- insertion marker -->
