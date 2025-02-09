@@ -4,6 +4,49 @@ entries:
   - annotations:
       artifacthub.io/images: |
         - name: Axelor Open Suite
+          image: pmoscode/axelor-open-suite:v7.2.32
+          platforms:
+            - linux/amd64
+      artifacthub.io/license: MIT
+      artifacthub.io/links: |
+        - name: Source
+          url: https://github.com/pmoscode-helm/axelor-open-suite
+        - name: support
+          url: https://github.com/pmoscode-helm/axelor-open-suite/issues
+      artifacthub.io/maintainers: |
+        - name: pmoscode
+          email: info@pmoscode.de
+    apiVersion: v2
+    appVersion: v7.2.32
+    created: "2025-02-09T10:04:45.282825+01:00"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.8.0
+    description: 'Open source ERP and BPM platform. Axelor Open Suite reduces the
+      complexity and improve responsiveness of business processes.  Thanks to its
+      modularity, you can start with few features and then activate other modules
+      when needed. '
+    digest: de28ff7a6b0887cb675075b22641b5a695cdf45c901bf318ce02afa2df9da35b
+    home: https://axelor.com/
+    icon: https://axelor.com/wp-content/uploads/2023/05/logo-axelor-bleu.svg
+    maintainers:
+    - email: info@pmoscode.de
+      name: pmoscode
+      url: pmoscode.de
+    name: axelor-open-suite
+    sources:
+    - https://github.com/axelor/axelor-open-suite
+    - https://github.com/pmoscode-helm/axelor-open-suite
+    - https://github.com/pmoscode-helm/axelor-open-suite-docker
+    type: application
+    urls:
+    - https://github.com/pmoscode-helm/axelor-open-suite/releases/download/axelor-open-suite-7.2.32/axelor-open-suite-7.2.32.tgz
+    version: 7.2.32
+  - annotations:
+      artifacthub.io/images: |
+        - name: Axelor Open Suite
           image: pmoscode/axelor-open-suite:v7.2.30
           platforms:
             - linux/amd64
@@ -947,4 +990,4 @@ entries:
     urls:
     - https://github.com/pmoscode-helm/axelor-open-suite/releases/download/axelor-open-suite-7.1.2/axelor-open-suite-7.1.2.tgz
     version: 7.1.2
-generated: "2025-01-11T22:34:47.113818+01:00"
+generated: "2025-02-09T10:04:45.282976+01:00"
