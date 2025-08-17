@@ -8,14 +8,22 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 <!-- insertion marker -->
 ## Unreleased
 
-<small>[Compare with latest](https://github.com/pmoscode-helm/axelor-open-suite/compare/axelor-open-suite-7.2.32...HEAD)</small>
+<small>[Compare with latest](https://github.com/pmoscode-helm/axelor-open-suite/compare/axelor-open-suite-7.2.39...HEAD)</small>
 
 ### Features
 
-- update to v7.2.39 ([903e3ce](https://github.com/pmoscode-helm/axelor-open-suite/commit/903e3ce71b49b7f02da4a59bdf145831ca13b6e4) by Peter Motzko).
-- update to v7.2.32 ([380e284](https://github.com/pmoscode-helm/axelor-open-suite/commit/380e2841e581e2af04c66e32454d69075caac8e7) by Peter Motzko).
+- update to v7.2.46 ([e21fcc9](https://github.com/pmoscode-helm/axelor-open-suite/commit/e21fcc9dac96333dab18c0d14a010c24ba587e20) by Peter Motzko).
+- update to v7.2.39 ([e62794e](https://github.com/pmoscode-helm/axelor-open-suite/commit/e62794e8f4b776b627d59ca342cba2044af25e4b) by Peter Motzko).
 
 <!-- insertion marker -->
+## [axelor-open-suite-7.2.39](https://github.com/pmoscode-helm/axelor-open-suite/releases/tag/axelor-open-suite-7.2.39) - 2025-03-07
+
+<small>[Compare with axelor-open-suite-7.2.32](https://github.com/pmoscode-helm/axelor-open-suite/compare/axelor-open-suite-7.2.32...axelor-open-suite-7.2.39)</small>
+
+### Features
+
+- update to v7.2.32 ([380e284](https://github.com/pmoscode-helm/axelor-open-suite/commit/380e2841e581e2af04c66e32454d69075caac8e7) by Peter Motzko).
+
 ## [axelor-open-suite-7.2.32](https://github.com/pmoscode-helm/axelor-open-suite/releases/tag/axelor-open-suite-7.2.32) - 2025-01-11
 
 <small>[Compare with axelor-open-suite-7.2.30](https://github.com/pmoscode-helm/axelor-open-suite/compare/axelor-open-suite-7.2.30...axelor-open-suite-7.2.32)</small>
