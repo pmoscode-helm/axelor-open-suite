@@ -87,6 +87,8 @@ persistence:
 postgresql:
   # -- Build in postgresql db
   enabled: true
+  image:
+    repository: bitnamilegacy/postgresql
   auth:
     # -- Default db user
     username: axelor
