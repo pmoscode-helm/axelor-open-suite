@@ -1,8 +1,10 @@
 # axelor-open-suite Helm Chart
-![Version: 7.2.57](https://img.shields.io/badge/Version-7.2.57-informational?style=flat-square)
+![Version: 7.2.58](https://img.shields.io/badge/Version-7.2.58-informational?style=flat-square)
 [![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/axelor-open-suite)](https://artifacthub.io/packages/search?repo=axelor-open-suite)
 
 Open source ERP and BPM platform.
+
+The postgresql dependency is using the "bitnamilegacy/postgresql" repository now!
 
 Axelor Open Suite reduces the complexity and improve responsiveness of business processes.
 Thanks to its modularity, you can start with few features and then activate other modules when needed.
@@ -75,6 +77,7 @@ See [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) for command document
 | postgresql.auth.database | string | `"axelor"` | Default database to use |
 | postgresql.auth.username | string | `"axelor"` | Default db user |
 | postgresql.enabled | bool | `true` | Build in postgresql db |
+| postgresql.image.repository | string | `"bitnamilegacy/postgresql"` |  |
 | resources.requests.cpu | string | `"300m"` |  |
 | resources.requests.memory | string | `"512Mi"` |  |
 | securityContext.allowPrivilegeEscalation | bool | `false` |  |

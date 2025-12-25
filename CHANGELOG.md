@@ -8,13 +8,22 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 <!-- insertion marker -->
 ## Unreleased
 
-<small>[Compare with latest](https://github.com/pmoscode-helm/axelor-open-suite/compare/axelor-open-suite-7.2.53...HEAD)</small>
+<small>[Compare with latest](https://github.com/pmoscode-helm/axelor-open-suite/compare/axelor-open-suite-7.2.57...HEAD)</small>
 
 ### Features
 
-- update to v7.2.57 ([0aac743](https://github.com/pmoscode-helm/axelor-open-suite/commit/0aac7437294b539106c26d4d44fa729247dc980d) by Peter Motzko).
+- update chart by use "bitnamilegacy" repository for DB dependency ([e76da84](https://github.com/pmoscode-helm/axelor-open-suite/commit/e76da84883333de9c4acf87b18a43b163a8cb9c5) by Peter Motzko).
+- switch to the legacy repository ([487918c](https://github.com/pmoscode-helm/axelor-open-suite/commit/487918ccc1c396dcdb571dbf9a9d3bbdca65ba51) by Peter Motzko).
 
 <!-- insertion marker -->
+## [axelor-open-suite-7.2.57](https://github.com/pmoscode-helm/axelor-open-suite/releases/tag/axelor-open-suite-7.2.57) - 2025-12-21
+
+<small>[Compare with axelor-open-suite-7.2.53](https://github.com/pmoscode-helm/axelor-open-suite/compare/axelor-open-suite-7.2.53...axelor-open-suite-7.2.57)</small>
+
+### Features
+
+- update to v7.2.57 ([bec0a81](https://github.com/pmoscode-helm/axelor-open-suite/commit/bec0a81352bd7f83732ac179cc35eda7ef18990d) by Peter Motzko).
+
 ## [axelor-open-suite-7.2.53](https://github.com/pmoscode-helm/axelor-open-suite/releases/tag/axelor-open-suite-7.2.53) - 2025-11-07
 
 <small>[Compare with axelor-open-suite-7.2.52](https://github.com/pmoscode-helm/axelor-open-suite/compare/axelor-open-suite-7.2.52...axelor-open-suite-7.2.53)</small>
